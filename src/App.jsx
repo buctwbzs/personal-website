@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import PropTypes from 'prop-types';
-import { hot } from 'react-hot-loader';
-import Home from './containers/Home';
-import AboutMe from './containers/AboutMe';
-import Showcase from './containers/Showcase';
-import Blogs from './containers/Blogs';
-import Blog from './containers/Blog';
+import { hot } from 'react-hot-loader'
+import Home from './containers/Home'
+import AboutMe from './containers/AboutMe'
+import Showcase from './containers/Showcase'
+import Blogs from './containers/Blogs'
+import Blog from './containers/Blog'
 
 
 
@@ -14,7 +13,7 @@ class App extends Component {
 
   static propTypes = {
 
-  };
+  }
 
   render() {
     return (
@@ -27,10 +26,10 @@ class App extends Component {
           <Route path="/blog/:id" component={Blog} />
         </Switch>
       </BrowserRouter >
-    );
+    )
   }
 }
 
 
 
-export default hot(module)(App);
+export default hot(module)(App)
