@@ -12,7 +12,7 @@ import Blog from './containers/Blog';
 
 class App extends Component {
 
-  static PropTypes = {
+  static propTypes = {
 
   };
 

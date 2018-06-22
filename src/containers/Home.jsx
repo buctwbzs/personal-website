@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Hompage extends Component {
 
-  static PropTypes = {
+  static propTypes = {
     
   };
   render() {
