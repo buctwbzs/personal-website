@@ -1,9 +1,9 @@
-const path = require('path');
-const webpack = require('webpack');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const merge = require('webpack-merge');
-const common = require('./webpack.common');
+const path = require('path')
+const webpack = require('webpack')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+const merge = require('webpack-merge')
+const common = require('./webpack.common')
 
 module.exports = merge(common, {
   plugins: [
@@ -28,4 +28,4 @@ module.exports = merge(common, {
     hints: false
   },
   mode: 'production'
-});
+})
