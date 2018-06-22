@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Hompage extends Component {
+class Blogs extends Component {
+  
+  static propTypes = {
+
+  };
+
   render() {
     return (
       <div>
-        home
+        Blogs
       </div>
     );
   }
 }
 
-Hompage.propTypes = {
 
-};
-
-export default Hompage;
+export default Blogs;
