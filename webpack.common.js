@@ -71,7 +71,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'webpack-react-template',
+      title: 'buctwbzs',
       template: './src/template.html',
       inject: 'body',
       chunks: ['index', 'styles']
