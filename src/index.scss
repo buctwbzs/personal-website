@@ -19,3 +19,12 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.container {
+  padding-top: 68px;
+}
+
+.selected {
+  font-size: 1.4em !important;
+  color: #613400 !important;
+}

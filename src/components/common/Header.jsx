@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import me from '../../public/image/me.gif'
 
 const Head = styled.header`
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   width:100%;
   height: 68px;
   background: #FADB14;
@@ -26,7 +29,7 @@ const Head = styled.header`
         text-align: center;
         color: #AD6800;
         transition: color .2s ease-in, font-size .2s ease-in;
-        &:hover{
+        &:hover {
           font-size: 1.4em;
           color: #613400;
         }
@@ -42,18 +45,34 @@ const Head = styled.header`
 `
 
 class Header extends Component {
+
+
   render() {
     return (
       <Head>
         <div>
           <img src={me} alt="logo" />
         </div>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/works">Works</Link>
-          <Link to="/about">About</Link>
-          <Link to="/blogs">Blogs</Link>
-          <Link to="/books">Books</Link>
+        <div>{
+          [
+            { path: '/', title: 'Home' },
+            { path: '/about', title: 'About' },
+            { path: '/works', title: 'Works' },
+            { path: '/blogs', title: 'Blogs' },
+            { path: '/books', title: 'Books' }
+          ].map(({ path, title }, i) => (
+            <NavLink
+              key={i}
+              to={path}
+              exact
+              activeClassName="selected"
+            >
+              {title}
+            </NavLink>
+          ))
+        }
+
+
         </div>
       </Head>
     )

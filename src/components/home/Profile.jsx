@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import me from '../../public/image/me.gif'
 
+
 const ProfileBox = styled.section`
   display: flex;
   flex-direction: column;
@@ -23,6 +24,7 @@ const ProfileBox = styled.section`
   }
 `
 class Profile extends Component {
+
   render() {
     return (
       <ProfileBox>
