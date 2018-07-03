@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import Profile from '../components/home/Profile'
+import Cartoon from '../components/home/Cartoon'
+import Concat from '../components/home/Concat'
 
-class Hompage extends Component {
-
-  static propTypes = {
-    
-  }
+class Home extends Component {
   render() {
     return (
       <div>
-        home
+        <Profile />
+        <Concat />
+        <Cartoon />
       </div>
     )
   }
 }
 
 
-
-export default Hompage
+export default Home

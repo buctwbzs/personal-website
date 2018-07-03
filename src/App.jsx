@@ -6,7 +6,8 @@ import AboutMe from './containers/AboutMe'
 import Showcase from './containers/Showcase'
 import Blogs from './containers/Blogs'
 import Blog from './containers/Blog'
-
+import Header from './components/common/Header'
+import Footer from './components/common/Footer'
 
 
 class App extends Component {
@@ -18,13 +19,17 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={AboutMe} />
-          <Route path="/books" component={Showcase} />
-          <Route path="/blogs" component={Blogs} />
-          <Route path="/blog/:id" component={Blog} />
-        </Switch>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={AboutMe} />
+            <Route path="/books" component={Showcase} />
+            <Route path="/blogs" component={Blogs} />
+            <Route path="/blog/:id" component={Blog} />
+          </Switch>
+          <Footer />
+        </div>
       </BrowserRouter >
     )
   }

@@ -10,16 +10,17 @@
   </title>
   <base href="/">
   <script>
-    (function (document, window) {
+/*     (function (document, window) {
       const listenr = () => {
         const html = document.documentElement
         const cw = html.clientWidth
-        html.style.fontSize = cw / 19.2 + 'px'
-        console.log(html.style.fontSize);
+        const fontSize = 100 * (cw / 1920) + 'px'
+        html.style.fontSize = fontSize;
       }
       const event = 'orienonchange' in window ? '' : 'resize'
-      window.addEventListener(event, listenr)
-    })(document, window)
+      window.addEventListener(event, listenr, false)
+      document.addEventListener('DOMContentLoaded', listenr, false);
+    })(document, window) */
   </script>
 </head>
 
