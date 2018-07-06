@@ -8,6 +8,7 @@ import Blogs from './containers/Blogs'
 import Blog from './containers/Blog'
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
+import Whiteboard from './containers/Whiteboard'
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/books" component={Showcase} />
             <Route path="/blogs" component={Blogs} />
             <Route path="/blog/:id" component={Blog} />
+            <Route path="/editor" component={Whiteboard} />
           </Switch>
           <Footer />
         </div>
