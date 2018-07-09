@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import me from '../../public/image/me.gif'
+import me from '../../public/image/logo.jpg'
 
 const Head = styled.header`
   display: flex;

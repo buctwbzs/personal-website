@@ -1,0 +1,33 @@
+.wrapperClassName {
+  width: 1160px;
+  max-width: 1160px;
+}
+
+.editorClassName {
+  padding: 0 1rem;
+  height: calc(100vh - 346px);
+  border-left: 1px dashed #b3b3b1;
+  border-right: 1px dashed #b3b3b1;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #b3b3b1;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #b3b3b1;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #b3b3b1;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #b3b3b1;
+}
