@@ -15,7 +15,3 @@ class Whiteboard extends Component {
 }
 
 Whiteboard.propTypes = {
-
-}
-
-export default Whiteboard
