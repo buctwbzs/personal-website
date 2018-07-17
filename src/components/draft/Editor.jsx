@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Editor as WYSIWYG } from 'react-draft-wysiwyg'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { fetchCategoriesStart } from '../../store/actions/draft/categories'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 import './editor.scss'
 
@@ -85,6 +87,18 @@ const BtnGroup = styled.div`
 `
 
 class Editor extends Component {
+
+  static defaultProps = {
+
+  }
+
+  static propTypes = {
+    fetchCategoriesStart: PropTypes.func.isRequired
+  }
+  componentDidMount() {
+    this.props.fetchCategoriesStart({ loading: true })
+  }
+
   render() {
     return (
       <EditorBox>
@@ -125,5 +139,11 @@ class Editor extends Component {
 Editor.propTypes = {
 
 }
+const mapStateToProps = (state) => ({
+  categories: state.draftStore.categories
+})
+const mapDispatchToProps = {
+  fetchCategoriesStart
+}
 
-export default Editor
+export default connect(mapStateToProps, mapDispatchToProps)(Editor)

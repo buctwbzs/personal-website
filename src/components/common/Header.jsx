@@ -39,8 +39,7 @@ const Head = styled.header`
       width: 50px;
       height: 50px;
       border-radius: 50%;
-    }
-    
+    } 
   }
 `
 

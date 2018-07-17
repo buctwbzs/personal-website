@@ -28,10 +28,13 @@ module.exports = {
             "error",
             "single"
         ],
-        "no-console": { "allow": ["log"] },
+        "no-console": 1,
         "semi": [
             "error",
             "never"
         ]
+    },
+    "globals":{
+        "apiUrl": true
     }
 };
