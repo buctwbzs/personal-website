@@ -28,6 +28,7 @@ module.exports = {
             "error",
             "single"
         ],
+        "no-console": { "allow": ["log"] },
         "semi": [
             "error",
             "never"
