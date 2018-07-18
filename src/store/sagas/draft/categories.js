@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
-import { FETCH_CATEGORIES_START, FETCH_CATEGORIES_SUCCESS } from '../../types/draft/categories'
+import { FETCH_CATEGORIES_START } from '../../types/draft/categories'
 import { fetchCategoriesSuccess, fetchCategoriesFailure } from '../../actions/draft/categories'
 import API from '../../../api/api'
 

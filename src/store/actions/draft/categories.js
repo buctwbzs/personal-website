@@ -3,7 +3,7 @@ import { createActions } from 'redux-actions'
 import {
   FETCH_CATEGORIES_START,
   FETCH_CATEGORIES_SUCCESS,
-  FETCH_CATEGORIES_FAIURE
+  FETCH_CATEGORIES_FAILURE
 } from '../../types/draft/categories'
 
 
@@ -18,7 +18,7 @@ const {
   [FETCH_CATEGORIES_SUCCESS]: categories => ({
     loading: false, categories
   }),
-  [FETCH_CATEGORIES_FAIURE]: error => ({
+  [FETCH_CATEGORIES_FAILURE]: error => ({
     loading: false,
     error
   })
