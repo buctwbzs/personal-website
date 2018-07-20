@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { EditorState, convertToRaw } from 'draft-js'
 import { Editor as WYSIWYG } from 'react-draft-wysiwyg'
+import draftToHtml from 'draftjs-to-html'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 import { fetchCategoriesStart } from '../../store/actions/draft/categories'
+import { putBlogStart } from '../../store/actions/draft/blog'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 import './editor.scss'
 
@@ -88,47 +91,102 @@ const BtnGroup = styled.div`
 
 class Editor extends Component {
 
-  static defaultProps = {
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      category: '',
+      tags: '',
+      title: '',
+      content: EditorState.createEmpty()
+    }
   }
 
   static propTypes = {
-    fetchCategoriesStart: PropTypes.func.isRequired
+    fetchCategoriesStart: PropTypes.func.isRequired,
+    putBlogStart: PropTypes.func.isRequired,
+    categories: PropTypes.array.isRequired
+  }
+
+  static defaultProps = {
+    categories: []
   }
   componentDidMount() {
     this.props.fetchCategoriesStart({ loading: true })
   }
 
+  onControllerChange = e => {
+    const target = e.target
+    this.setState({
+      [target.name]: target.value.trim()
+    })
+  }
+  onEditorStateChange = content => {
+    console.log(content)
+    this.setState({
+      content
+    })
+  }
+
+  publishClick = () => {
+
+    const content = draftToHtml(convertToRaw(this.state.content.getCurrentContent()))
+    const payload = { ...this.state, content }    
+    console.log(payload)
+    this.props.putBlogStart(payload)
+  }
+
   render() {
+
+    const { categories } = this.props
+    const { content } = this.state
+
     return (
       <EditorBox>
         <Head>
           <div>
             <SelectBox>
-              <select name="category" id="category" defaultValue="请选择一个分类">
-                <option value="请选择一个分类" disabled>Categories </option>
-                <option value="Java">Java</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="Mysql">Mysql</option>
-                <option value="Data-Structure">Data-Structure</option>
-                <option value="Algorithm">Algorithm</option>
-                <option value="Linux">Linux</option>
-                <option value="Life">Life</option>
+              <select
+                name="category"
+                id="category"
+                defaultValue="请选择一个分类"
+                onChange={this.onControllerChange}
+              >
+                <option value="请选择一个分类" disabled>Categories</option>
+                {categories.map(({ id, categoryName }) => (
+                  <option
+                    key={id}
+                    value={id}
+                  >
+                    {categoryName}
+                  </option>
+                ))}
               </select>
-              <input type="text" placeholder="Tags..." />
+              <input
+                name="tags"
+                type="text"
+                placeholder="Tags..."
+                onChange={this.onControllerChange}
+              />
             </SelectBox>
             <TitleBox>
-              <input type="text" placeholder="Title..." />
+              <input
+                name="title"
+                type="text"
+                placeholder="Title..."
+                onChange={this.onControllerChange}
+              />
             </TitleBox>
           </div>
           <BtnGroup>
             <button>Save As</button>
-            <button>Publish</button>
+            <button onClick={this.publishClick}>Publish</button>
           </BtnGroup>
         </Head>
         <WYSIWYG
+          editorState={content}
           wrapperClassName="wrapperClassName"
           editorClassName="editorClassName"
+          onEditorStateChange={this.onEditorStateChange}
         />
 
       </EditorBox>
@@ -136,14 +194,16 @@ class Editor extends Component {
   }
 }
 
-Editor.propTypes = {
 
-}
 const mapStateToProps = (state) => ({
-  categories: state.draftStore.categories
+  categories: state.draftStore.categories.categories
 })
 const mapDispatchToProps = {
-  fetchCategoriesStart
+  fetchCategoriesStart,
+  putBlogStart
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Editor)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Editor)

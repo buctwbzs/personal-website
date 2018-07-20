@@ -8,7 +8,7 @@ class AboutMe extends Component {
   render() {
     return (
       <div>
-      About me.
+       TODO
       </div>
     )
   }

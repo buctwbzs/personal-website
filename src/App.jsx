@@ -14,6 +14,7 @@ import Draft from './containers/Draft'
 import reducers from './store/reducers/index'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './store/sagas'
+import NoMatch from './containers/NoMatch';
 
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [sagaMiddleware]
@@ -44,11 +45,12 @@ class App extends Component {
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={AboutMe} />
-              <Route path="/books" component={Showcase} />
               <Route path="/blogs" component={Blogs} />
               <Route path="/blog/:id" component={Blog} />
+              <Route path="/books" component={Showcase} />
+              <Route path="/about" component={AboutMe} />
               <Route path="/draft" component={Draft} />
+              <Route component={NoMatch} />
             </Switch>
             <Footer />
           </div>
