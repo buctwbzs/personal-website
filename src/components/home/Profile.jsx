@@ -10,7 +10,9 @@ const ProfileBox = styled.section`
   padding-top: 80px;
   height: 440px;
   >p{
+    padding: 0 1em;
     text-align: center;
+    line-height: 1.5em;
     color: #33344D;
     &:first-of-type{
       font-size: 28px;
@@ -20,6 +22,15 @@ const ProfileBox = styled.section`
       margin-top: 0;
       font-size: 20px;
       font-family: PingFangSC-Thin;
+    }
+    @media (max-width: 899px) {
+      &:first-of-type{
+        margin-bottom: .5em;
+        font-size: 18px;
+      }
+    }
+    &:last-child{
+      font-size: 16px;
     }
   }
 `

@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const CartoonBox = styled.section`
-  display: flex;
-  width: 100%;
-  min-width: 1440px;
-  height: 600px;
-  border: 1px solid green;
+  display: flex;;
 `
 
 class Cartoon extends Component {

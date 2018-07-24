@@ -54,10 +54,10 @@ class Header extends Component {
         </div>
         <div>{
           [
-            { path: '/', title: 'Home' },
-            { path: '/blogs', title: 'Blogs' },
-            { path: '/books', title: 'Books' },
-            { path: '/about', title: 'About' },
+            /*  { path: '/', title: 'Home' },
+             { path: '/blogs', title: 'Blogs' },
+             { path: '/books', title: 'Books' },
+             { path: '/about', title: 'About' }, */
           ].map(({ path, title }, i) => (
             <NavLink
               key={i}

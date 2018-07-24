@@ -16,9 +16,9 @@ const ConcatBox = styled.section`
   height: 120px;
   >div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 400px;
+    width: 600px;
     height: 120px;
     >a{
       width: 48px;
