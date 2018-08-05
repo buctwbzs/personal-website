@@ -6,10 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
-    index: './src/index.jsx'
+    index: './client/Index.jsx'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/client'),
     filename: '[hash].[name].bundle.js'
   },
   module: {
@@ -18,7 +18,7 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'css-loader', options: { importLoaders: 2 } },
           'postcss-loader',
           'sass-loader'
         ]
@@ -55,28 +55,30 @@ module.exports = {
       maxInitialRequests: 3,
       name: false,
       cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
+        vendor: {
           chunks: 'all',
-          reuseExistingChunk: true,
-          enforce: true
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          minChunks: 1,
+          maxInitialRequests: 5,
+          minSize: 0,
+          priority: 100,
         }
       }
     }
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsc']
+    extensions: ['.js', '.jsx', '.tsc', 'scss', 'css']
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'buctwbzs',
-      template: './src/template.html',
+      template: './client/template.html',
       inject: 'body',
-      chunks: ['index', 'styles']
+      chunks: ['index', 'vendor']
     }),
-    new MiniCssExtractPlugin({ // JS中的CSS -> 单独的文件中
+    new MiniCssExtractPlugin({
       filename: '[id].[contenthash:12].css',
       chunkFilename: '[id].[contenthash:12].css'
     }),

@@ -7,7 +7,10 @@ body {
   font-style: normal;
   font-variant: normal;
 }
-
+#app{
+  display: flex;
+  justify-content: center;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -20,11 +23,6 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-.container {
-  padding-top: 68px;
-}
-
 .selected {
   font-size: 1.4em !important;
   color: #613400 !important;

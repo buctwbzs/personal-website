@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import Profile from '../components/home/Profile'
-import Cartoon from '../components/home/Cartoon'
+import Works from '../components/home/Works'
 import Concat from '../components/home/Concat'
+import { CommonBox } from '../components/common/CommonBox'
 
 class Home extends Component {
   render() {
     return (
-      <div>
+      <CommonBox>
         <Profile />
         <Concat />
-        <Cartoon />
-      </div>
+        <Works />
+      </CommonBox>
     )
   }
 }
