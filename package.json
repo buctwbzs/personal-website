@@ -55,11 +55,16 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "asset-require-hook": "^1.2.0",
     "babel-runtime": "^6.26.0",
+    "css-modules-require-hook": "^4.2.3",
     "draft-js": "^0.10.5",
     "draftjs-to-html": "^0.8.4",
     "es6-promise": "^4.2.4",
     "html-to-draftjs": "^1.4.0",
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "koa-send": "^5.0.0",
     "normalize.css": "^8.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
