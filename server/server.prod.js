@@ -24,6 +24,9 @@ router.get('/', (ctx) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="Buctwbzs">
+      <meta name="keywords" content="Buctwbzs">
+      <meta name="description" content="Buctwbzs's personal website.">
       <title>
         Buctwbzs
       </title>
