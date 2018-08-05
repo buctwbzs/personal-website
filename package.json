@@ -4,11 +4,12 @@
   "description": "My personal website front-end",
   "main": "index.js",
   "scripts": {
-    "dev:server": "",
+    "dev:server": "nodemon --exac babel-node ./server/server.js",
     "dev:client": "webpack-dev-server --hot --config webpack.dev.js",
-    "build:client": "",
-    "build:server": "",
-    "build": "webpack --config webpack.prod.js",
+    "run:ssr": "npm run build:client && npm run dev:server",
+    "build:client": "webpack --config webpack.prod.js",
+    "build:server": "webpack --config webpack.server.js",
+    "build": "npm run build:client && npm run build:server",
     "test": "jest"
   },
   "repository": {
