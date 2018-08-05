@@ -8,13 +8,13 @@ import { ServerStyleSheet } from 'styled-components'
 import App from './App'
 import manifest from '../dist/client/manifest.json'
 
-const sheet = new ServerStyleSheet()
+
 
 const app = new Koa()
 const router = new Router()
 
 router.get('/', (ctx) => {
-
+  const sheet = new ServerStyleSheet()
   const SSRString = renderToString(sheet.collectStyles(<App location={ctx.url} />))
   const styles = sheet.getStyleTags()
   const html = `
@@ -30,6 +30,8 @@ router.get('/', (ctx) => {
       <title>
         Buctwbzs
       </title>
+      <link rel="icon" href="http://www.buctwbzs.com/statics/images/personal-website/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="http://www.buctwbzs.com/statics/images/personal-website/favicon.ico" type="image/x-icon">
       <link href=${manifest['vendor.css']} rel="stylesheet">
       <link href=${manifest['index.css']} rel="stylesheet">
       ${styles}

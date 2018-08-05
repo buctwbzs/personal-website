@@ -36,6 +36,8 @@ router.get('/', (ctx) => {
       <title>
         Buctwbzs
       </title>
+      <link rel="icon" href="http://www.buctwbzs.com/statics/images/personal-website/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="http://www.buctwbzs.com/statics/images/personal-website/favicon.ico" type="image/x-icon">
       <link href=${manifest['vendor.css']} rel="stylesheet">
       <link href=${manifest['index.css']} rel="stylesheet">
       ${styles}
@@ -55,7 +57,7 @@ router.get('/', (ctx) => {
 app.use(router.routes())
 
 app.use(async ctx => {
-  await send(ctx, ctx.path, { root: path.resolve(__dirname, '../dist/client') })
+  await send(ctx, ctx.path, { root: '../dist/client' })
 })
 
 app.listen(3000)
