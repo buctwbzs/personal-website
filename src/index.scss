@@ -7,7 +7,10 @@ body {
   font-style: normal;
   font-variant: normal;
 }
-
+#app{
+  display: flex;
+  justify-content: center;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

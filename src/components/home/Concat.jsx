@@ -13,6 +13,7 @@ import emailHover from '../../public/image/email-hover.png'
 const ConcatBox = styled.section`
   display: flex;
   justify-content: center;
+  width: 100%;
   height: 120px;
   >div{
     display: flex;

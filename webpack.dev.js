@@ -7,7 +7,7 @@ module.exports = merge(common, {
   devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    port: '8081',
+    port: '8080',
     hot: true,
     historyApiFallback: true
   },

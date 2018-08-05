@@ -8,6 +8,7 @@ const ProfileBox = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 80px;
+  width: 100%;
   height: 440px;
   >p{
     padding: 0 1em;
@@ -15,22 +16,19 @@ const ProfileBox = styled.section`
     line-height: 1.5em;
     color: #33344D;
     &:first-of-type{
-      font-size: 28px;
-      font-family: PingFangSC-Light;
+      font-size: 2rem;
     }
     &:last-child{
       margin-top: 0;
-      font-size: 20px;
-      font-family: PingFangSC-Thin;
+      font-size: 1.5rem;
     }
     @media (max-width: 899px) {
       &:first-of-type{
-        margin-bottom: .5em;
-        font-size: 18px;
+        font-size: 1.4rem;
       }
-    }
-    &:last-child{
-      font-size: 16px;
+      &:last-child{
+      font-size: 1.2rem;
+      }
     }
   }
 `

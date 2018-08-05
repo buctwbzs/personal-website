@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div style={{paddingTop: '68px'}}>
+        <div style={{paddingTop: '68px',width: '100%',maxWidth: '100%'}}>
           <Header />
           <BrowserRouter basename="/">
             <Switch>
@@ -53,3 +53,4 @@ class App extends Component {
 
 
 export default hot(module)(App)
+
