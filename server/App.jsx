@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { StaticRouter, Route, Switch } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { hot } from 'react-hot-loader'
-import Home from '../client/containers/Home'
 import Header from '../client/components/common/Header'
 import Footer from '../client/components/common/Footer'
+import Home from '../client/containers/Home.jsx'
+import NoMatch from '../client/containers/NoMatch.jsx'
 import reducers from '../client/store/reducers/index'
 import rootSaga from '../client/store/sagas'
-import NoMatch from '../client/containers/NoMatch'
 /* 
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [sagaMiddleware]
@@ -28,16 +29,23 @@ sagaMiddleware.run(rootSaga) */
 
 class App extends Component {
 
+  static propTypes = {
+    location: PropTypes.string.isRequired
+  }
+
   render() {
     return (
       <div style={{ paddingTop: '68px', width: '100%', maxWidth: '100%' }}>
         <Header />
-        <BrowserRouter basename="/">
+        <StaticRouter
+          context={{}}
+          location={this.props.location}
+        >
           <Switch>
             <Route exact path="/" component={Home} />
             <Route component={NoMatch} />
           </Switch>
-        </BrowserRouter>
+        </StaticRouter>
         <Footer />
       </div>
     )

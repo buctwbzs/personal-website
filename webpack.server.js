@@ -1,5 +1,6 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const  webpack = require('webpack')
 
 module.exports = {
 
@@ -7,7 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'server/server.prod.js'),
   output: {
     libraryTarget: 'commonjs2',
-    path: path.resolve(__dirname, 'dist/server/'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
   module: {
@@ -22,6 +23,13 @@ module.exports = {
         ]
       },
       {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ],
+        exclude: /node_modules/
+      },
+      {
         test: /\.(js|jsx)$/,
         use: [
           'babel-loader'
@@ -30,7 +38,14 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'static_url': JSON.stringify('http://www.buctwbzs.com/statics/images/personal-website/')
+    })
+  ],
   resolve: {
     extensions: ['.jsx', '.js', '.json', '.scss']
   },
+  mode: 'production'
 }

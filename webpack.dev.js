@@ -14,7 +14,7 @@ module.exports = merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
-      'apiUrl': JSON.stringify('http://localhost:8080/')
+      'static_url': JSON.stringify('http://www.buctwbzs.com/statics/images/personal-website/')
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()

@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import twitter from '../../public/image/twitter.png'
-import twitterHover from '../../public/image/twitter-hover.png'
-import github from '../../public/image/github.png'
-import githubHover from '../../public/image/github-hover.png'
-import ins from '../../public/image/ins.png'
-import insHover from '../../public/image/ins-hover.png'
-import email from '../../public/image/email.png'
-import emailHover from '../../public/image/email-hover.png'
-
 
 const ConcatBox = styled.section`
   display: flex;
@@ -27,28 +18,28 @@ const ConcatBox = styled.section`
       cursor: pointer;
     }
     >a:first-child{
-      background: url(${twitter});
+      background: url(${static_url}/twitter.png);
       &:hover{
-        background: url(${twitterHover});
+        background: url(${static_url}/twitter-hover.png);
       }
     }
     >a:nth-child(2){
      
-      background: url(${github});  
+      background: url(${static_url}github.png);  
       &:hover{
-        background: url(${githubHover});
+        background: url(${static_url}github-hover.png);
       }
     }
     >a:nth-child(3){
-      background: url(${ins});
+      background: url(${static_url}ins.png);
       &:hover{
-        background: url(${insHover});
+        background: url(${static_url}ins-hover.png);
       }
     }
     >a:last-child{
-      background: url(${email});
+      background: url(${static_url}email.png);
       &:hover{
-        background: url(${emailHover});
+        background: url(${static_url}email-hover.png);
       }
     }
   }
@@ -62,7 +53,7 @@ class Concat extends Component {
         <div>
           <a href="https://twitter.com/buctwbzs" />
           <a href="https://github.com/buctwbzs" />
-          <a href="" />
+          <a href="https://www.instagram.com/buctwbzs/" />
           <a href="mailto:buctwbzs@gmail.com" />
         </div>
       </ConcatBox>

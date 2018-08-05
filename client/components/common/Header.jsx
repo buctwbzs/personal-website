@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import me from '../../public/image/logo.jpg'
+
 
 const Head = styled.header`
   display: flex;
@@ -50,7 +50,7 @@ class Header extends Component {
     return (
       <Head>
         <div>
-          <img src={me} alt="logo" />
+          <img src={`${static_url}logo.jpg`} alt="logo" />
         </div>
         <div>{
           [

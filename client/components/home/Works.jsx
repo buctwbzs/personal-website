@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import crm from '../../public/image/CRM.png'
-import dashbord from '../../public/image/dashbord.png'
-import cmentor from '../../public/image/c-mentor.png'
-import cmentee from '../../public/image/c-mentee.png'
-
 
 const CartoonBox = styled.section`
   display: flex;
@@ -30,17 +25,19 @@ const CartoonBox = styled.section`
   }
 `
 
-class Cartoon extends Component {
+class Works extends Component {
   render() {
     return (
       <CartoonBox>
         <p className="title">Works</p>
         <div className="works">
-          {[crm, dashbord, cmentee, cmentor].map((v, i) => (
-            <div className="wrap">
-              <img src={v}
-                alt={`work-${i}`}
-                key={i}
+          {['crm.png', 'dashbord.png', 'c-mentee.png', 'c-mentor.png'].map((v, i) => (
+            <div
+              className="wrap"
+              key={i}
+            >
+              <img src={`${static_url}${v}`}
+                alt={`work-${v}`}
               />
             </div>
           ))}
@@ -52,4 +49,4 @@ class Cartoon extends Component {
 
 
 
-export default Cartoon
+export default Works

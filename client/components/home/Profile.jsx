@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import me from '../../public/image/me.gif'
-
 
 const ProfileBox = styled.section`
   display: flex;
@@ -37,7 +35,7 @@ class Profile extends Component {
   render() {
     return (
       <ProfileBox>
-        <img src={me} alt="me" />
+        <img src={`${static_url}me.gif`} alt="me" />
         <p>如果你无法简洁的表达你的想法，那只能说明你还不够了解它</p>
         <p>- 阿尔伯特·爱因斯坦</p>
       </ProfileBox>
