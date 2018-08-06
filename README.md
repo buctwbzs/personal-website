@@ -10,8 +10,8 @@
 
 ### Description
 This is my personal website project, built on React & koa.Use server-side render to increase speed and improve SEO.
-### Technology stack
-- front-end
+### Technology stack 🛠
+- front-end 💄
   - html5 
   - scss|postcss
   - styled-components
@@ -23,11 +23,11 @@ This is my personal website project, built on React & koa.Use server-side render
   - redux-actions
   - reudx-saga
   - jest
-- server
+- server 
   - koa2
   - koa-router
   - koa-send
-- test
+- test 😩
   - jest
 - others(dev & build)
   - webpack4+
@@ -51,7 +51,7 @@ This is my personal website project, built on React & koa.Use server-side render
 --webpack-prod.js
 --webpack-server.js
 ```
-### TODO
+### TODO 🤓
  - blog list page
  - blog detail page
  - blog editor
