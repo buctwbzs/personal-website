@@ -1,37 +1,58 @@
-## Personal WebSite
-### Table of Contents
-#### Tech stack(TODO)
-- 1 
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-  
-#### Directory Structure(TODO)
+## Table of Contents
+ - [Logo](#Logo)
+ - [Description](#Description)
+ - [Technology stack](#Technology-stack)
+ - [Directory Structure](#Directory-Structure)
+ - [TODO](#TODO)
+
+### Logo
+![Logo](http://www.buctwbzs.com/statics/images/personal-website/me.gif "Logo")
+
+### Description
+This is my personal website project, built on React & koa.Use server-side render to increase speed and improve SEO.
+### Technology stack
+- front-end
+  - html5 
+  - scss|postcss
+  - styled-components
+  - ES6+ 
+  - react
+  - react-router
+  - redux
+  - react-redux
+  - redux-actions
+  - reudx-saga
+  - jest
+- server
+  - koa2
+  - koa-router
+  - koa-send
+- test
+  - jest
+- others(dev & build)
+  - webpack4+
+  - babel
+  - nodemon
+  - eslint
 
 
-#### Main conf
-##### scripts(in package.json)
-TODO
-##### webpack-common.js
-TODO
-##### webpack-dev.js
-TODO
-##### webpack-prod.js
-TODO
-##### webpack-server.js
-TODO
-##### .babelrc
-TODO
-##### cmrh.conf.js
-TODO
-##### .browserlistsrc
-TODO
-##### postcss.config.js
-TODO
-
-#### TODO
+### Directory Structure(TODO)
+```
+--client
+--server
+--.babelrc
+--.browserslistrc
+--.eslintrc.js
+--cmrh.conf.js
+--postcss.config.js
+--package.json
+--webpack-common.js
+--webpack-dev.js
+--webpack-prod.js
+--webpack-server.js
+```
+### TODO
+ - blog list page
+ - blog detail page
+ - blog editor
+ - admin page
