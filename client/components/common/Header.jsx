@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 
 const Head = styled.header`
   display: flex;
@@ -52,25 +51,8 @@ class Header extends Component {
         <div>
           <img src={`${static_url}logo.jpg`} alt="logo" />
         </div>
-        <div>{
-          [
-            /*  { path: '/', title: 'Home' },
-             { path: '/blogs', title: 'Blogs' },
-             { path: '/books', title: 'Books' },
-             { path: '/about', title: 'About' }, */
-          ].map(({ path, title }, i) => (
-            <NavLink
-              key={i}
-              to={path}
-              exact
-              activeClassName="selected"
-            >
-              {title}
-            </NavLink>
-          ))
-        }
-
-
+        <div>
+          <a href="https://blog.buctwbzs.com" target="blog">Blog</a>
         </div>
       </Head>
     )

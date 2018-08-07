@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import { StaticRouter, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import { hot } from 'react-hot-loader'
 import Header from '../client/components/common/Header'
 import Footer from '../client/components/common/Footer'
 import Home from '../client/containers/Home.jsx'
 import NoMatch from '../client/containers/NoMatch.jsx'
-import reducers from '../client/store/reducers/index'
-import rootSaga from '../client/store/sagas'
+
 /* 
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [sagaMiddleware]
