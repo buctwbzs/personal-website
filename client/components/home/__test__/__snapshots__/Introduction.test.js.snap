@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Introductoin renders correctly 1`] = `
+<section
+  className="Introduction__IntroductionBox-s1hu0lqs-0 iJrNfr"
+>
+  <p>
+    This is my personal website. There are three versions of this website: 
+    <a
+      href="#"
+    >
+      React
+    </a>
+    , 
+    <a
+      href="http://angular.buctwbzs.com"
+    >
+      Angular
+    </a>
+    , 
+    <a
+      href="#"
+    >
+      Vue
+    </a>
+    ;  all websites use server-side rendering, and the source code is open(github). The current site built with React. If necessary,i hope you can create some new issues and help me improve them.
+  </p>
+</section>
+`;

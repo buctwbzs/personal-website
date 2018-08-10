@@ -2,7 +2,7 @@
 
 exports[`Header renders correctly 1`] = `
 <header
-  className="Header__Head-s11unpcf-0 ffeIyi"
+  className="Header__Head-s11unpcf-0 futdVf"
 >
   <div>
     <img
@@ -10,6 +10,13 @@ exports[`Header renders correctly 1`] = `
       src="http://www.buctwbzs.com/static/images/personal-website/logo.jpg"
     />
   </div>
-  <div />
+  <div>
+    <a
+      href="https://blog.buctwbzs.com"
+      target="_blank"
+    >
+      Blog
+    </a>
+  </div>
 </header>
 `;
