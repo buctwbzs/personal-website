@@ -40,7 +40,7 @@ class Introduction extends Component {
           <a href="http://angular.buctwbzs.com">Angular</a>,&nbsp;
           <a href="#">Vue</a>;&nbsp;
           all websites use server-side rendering, and the source code is open(github).
-          The current site built with React.
+          The current site built with <b>React</b>.
           If necessary,i hope you can create some new issues and help me improve them.
         </p>
       </IntroductionBox>
