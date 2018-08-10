@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-
 
 const Head = styled.header`
   display: flex;
@@ -18,7 +16,6 @@ const Head = styled.header`
     width: 50%;
     height: 100%;
     &:last-child{
-      justify-content: space-start;
       >a{
         width: 20%;
         max-width: 100px;
@@ -52,26 +49,10 @@ class Header extends Component {
         <div>
           <img src={`${static_url}logo.jpg`} alt="logo" />
         </div>
-        <div>{
-          [
-            /*  { path: '/', title: 'Home' },
-             { path: '/blogs', title: 'Blogs' },
-             { path: '/books', title: 'Books' },
-             { path: '/about', title: 'About' }, */
-          ].map(({ path, title }, i) => (
-            <NavLink
-              key={i}
-              to={path}
-              exact
-              activeClassName="selected"
-            >
-              {title}
-            </NavLink>
-          ))
-        }
-
-
+        <div>
+          <a href="https://blog.buctwbzs.com" target="_blank">Blog</a>
         </div>
+
       </Head>
     )
   }

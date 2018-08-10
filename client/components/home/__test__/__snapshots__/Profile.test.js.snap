@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile renders correctly 1`] = `
+<section
+  className="Concat__ConcatBox-s1clk3f5-0 bKczOW"
+>
+  <div>
+    <a
+      href="https://twitter.com/buctwbzs"
+    />
+    <a
+      href="https://github.com/buctwbzs"
+    />
+    <a
+      href="https://www.instagram.com/buctwbzs/"
+    />
+    <a
+      href="mailto:buctwbzs@gmail.com"
+    />
+  </div>
+</section>
+`;

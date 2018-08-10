@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="Header__Head-s11unpcf-0 ffeIyi"
+>
+  <div>
+    <img
+      alt="logo"
+      src="http://www.buctwbzs.com/static/images/personal-website/logo.jpg"
+    />
+  </div>
+  <div />
+</header>
+`;

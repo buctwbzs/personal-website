@@ -18,9 +18,9 @@ const ConcatBox = styled.section`
       cursor: pointer;
     }
     >a:first-child{
-      background: url(${static_url}/twitter.png);
+      background: url(${static_url}twitter.png);
       &:hover{
-        background: url(${static_url}/twitter-hover.png);
+        background: url(${static_url}twitter-hover.png);
       }
     }
     >a:nth-child(2){

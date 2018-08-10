@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Works renders correctly 1`] = `
+<section
+  className="Works__CartoonBox-s1mg5kcs-0 dLdsgj"
+>
+  <p
+    className="title"
+  >
+    Works
+  </p>
+  <div
+    className="works"
+  >
+    <div
+      className="wrap"
+    >
+      <img
+        alt="work-crm.png"
+        src="http://www.buctwbzs.com/static/images/personal-website/crm.png"
+      />
+    </div>
+    <div
+      className="wrap"
+    >
+      <img
+        alt="work-dashbord.png"
+        src="http://www.buctwbzs.com/static/images/personal-website/dashbord.png"
+      />
+    </div>
+    <div
+      className="wrap"
+    >
+      <img
+        alt="work-c-mentee.png"
+        src="http://www.buctwbzs.com/static/images/personal-website/c-mentee.png"
+      />
+    </div>
+    <div
+      className="wrap"
+    >
+      <img
+        alt="work-c-mentor.png"
+        src="http://www.buctwbzs.com/static/images/personal-website/c-mentor.png"
+      />
+    </div>
+  </div>
+</section>
+`;
