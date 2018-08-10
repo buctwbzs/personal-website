@@ -5,6 +5,7 @@ import Home from '../client/containers/Home'
 import Header from '../client/components/common/Header'
 import Footer from '../client/components/common/Footer'
 import NoMatch from '../client/containers/NoMatch'
+
 /* 
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [sagaMiddleware]

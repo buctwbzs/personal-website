@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 const Head = styled.header`
   display: flex;
@@ -17,7 +16,6 @@ const Head = styled.header`
     width: 50%;
     height: 100%;
     &:last-child{
-      justify-content: space-start;
       >a{
         width: 20%;
         max-width: 100px;
@@ -52,8 +50,9 @@ class Header extends Component {
           <img src={`${static_url}logo.jpg`} alt="logo" />
         </div>
         <div>
-          <a href="https://blog.buctwbzs.com" target="blog">Blog</a>
+          <a href="https://blog.buctwbzs.com" target="_blank">Blog</a>
         </div>
+
       </Head>
     )
   }
